@@ -1,42 +1,35 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
- * main - a simple program that outputs unordered
- * combinations of two digit integers without duplicates
+ * main - Entry point
  *
- * Return: 0 on success
+ * Return: Always 0
  */
+
 int main(void)
 {
-	int ifirst;
-	int i;
-	int jfirst;
-	int j;
+	int p, q;
 
-	for (ifirst = 48; ifirst < 58; ifirst++)
+	for (p = 0; p <= 98; p++)
 	{
-		for (i = 48; i < 58; i++)
+		for (q = p + 1; q <= 99; q++)
 		{
-			j = i + 1;
-			jfirst = ifirst;
-			for (; jfirst < 58; jfirst++)
-			{
-				for (; j < 58; j++)
-				{
-					putchar(ifirst);
-					putchar(i);
-					putchar(' ');
-					putchar(jfirst);
-					putchar(j);
-					if (ifirst != 57 || jfirst != 57 || i != 56 || j != 57)
-					{
-						putchar(',');
-						putchar(' ');
-																					}
-																				}
-				j = 48;
-			}
+			putchar((p / 10) + '0');
+			putchar((p % 10) + '0');
+			putchar(' ');
+			putchar((q / 10) + '0');
+			putchar((q % 10) + '0');
+																			if (p == 98 && q == 99)
+				continue;
+
+																			putchar(',');
+			putchar(' ');
 		}
-		putchar('\n');
-		return (0);
+	}
+	
+	putchar('\n');
+
+	return (0);
 }
