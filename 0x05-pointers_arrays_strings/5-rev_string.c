@@ -1,17 +1,32 @@
 #include "main.h"
 #include <stdio.h>
 /**
-* include<stdio.h>
-* main - check the code for ALX School students.
-* Return: Always 0.
+* rev_string - reverses a string
+* @s: holi
+*
 */
-
-int main(void)
+void rev_string(char *s)
 {
-	char s[10] = "My School";
+	int i;
+	int j;
+	int temp;
+	int length;
 
-	printf("%s\n", s);
-	rev_string(s);
-	printf("%s\n", s);
-	return (0);
+	while (s[i] != 0)
+	{
+		i++;
+	}
+
+	length = i;
+	i = 0;
+	j = length - 1;
+
+	while (i < j)
+	{
+		temp = s[i];
+		s[i] = s[j];
+		s[j] = temp;
+		i++;
+		j--;
+	}
 }
