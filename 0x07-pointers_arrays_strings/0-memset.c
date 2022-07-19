@@ -1,4 +1,4 @@
-#include "coding.h"
+#include "main.h"
 
 /**
 * _memset - function with 3 arguments
