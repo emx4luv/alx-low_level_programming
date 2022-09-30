@@ -1,1 +1,1 @@
-Doubly linked list tasks
+Doubly linked list tasks completed
